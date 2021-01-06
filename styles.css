@@ -61,7 +61,7 @@ body {
   text-transform: uppercase;
   padding: 1em 2.5em;
   border-radius: 15px;
-  font-size: var(--font-small);
+  font-size: var(--font-tiny);
   color: var(--color-bg-main);
   background-color: var(--color-accent);
   font-weight: 700;
@@ -69,7 +69,7 @@ body {
 
 @media screen and (min-width: 700px) {
   .button {
-    font-size: var(--font-med);
+    font-size: var(--font-small);
   }
 }
 
