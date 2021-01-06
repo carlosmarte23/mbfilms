@@ -1,0 +1,181 @@
+/* RESETS AND VARIABLES */
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+
+  /* VARIABLES */
+  --color-bg-main: #111111;
+  --color-bg-secondary: #252525;
+  --color-accent: #ecca1b;
+  --color-light: #ffffff;
+
+  --font-tiny: 1.6em;
+  --font-small: 2.4em;
+  --font-med: 3.2em;
+  --font-big: 4.8em;
+  --font-huge: 6.4em;
+}
+
+/* TYPHOGRAFY */
+
+h1 {
+  font-size: var(--font-med);
+}
+
+h2 {
+  font-size: var(--font-small);
+}
+
+body {
+  font-size: var(--font-small);
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (min-width: 750px) {
+  h1 {
+    font-size: var(--font-big);
+  }
+
+  h2 {
+    font-size: var(--font-med);
+  }
+
+  body {
+    font-size: var(--font-small);
+  }
+}
+
+/* GENERAL STYLES */
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-light);
+}
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1em 2.5em;
+  border-radius: 15px;
+  font-size: var(--font-small);
+  color: var(--color-bg-main);
+  background-color: var(--color-accent);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+  .button {
+    font-size: var(--font-med);
+  }
+}
+
+/* SPLASH SECTION */
+
+.splash {
+  display: grid;
+  height: 90vh;
+  margin-top: 10vh;
+  text-align: center;
+  justify-content: center;
+  align-content: flex-start;
+  grid-template-areas:
+    'logo'
+    'title'
+    'subtitle'
+    'photo'
+    'cta';
+  row-gap: 2em;
+}
+
+.splash__logo {
+  max-height: 200px;
+  grid-area: logo;
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
+}
+
+.splash__title {
+  font-size: var(--font-small);
+  grid-area: title;
+  text-transform: uppercase;
+  max-width: 700px;
+  justify-self: center;
+  align-self: center;
+}
+
+.splash__subtitle {
+  font-size: var(--font-tiny);
+  grid-area: subtitle;
+  align-self: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.splash__photo {
+  min-height: 150px;
+  max-height: 200px;
+  width: auto;
+  border-radius: 50%;
+  grid-area: photo;
+  justify-self: center;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.button--cta {
+  grid-area: cta;
+  justify-self: center;
+  align-self: center;
+}
+
+.bg-svg {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (min-width: 700px) {
+  .splash {
+    grid-template-areas:
+      'logo . photo'
+      'title . photo'
+      'subtitle . photo'
+      'cta . photo';
+    column-gap: 2em;
+    align-content: center;
+    row-gap: 0;
+    padding: 0 1em;
+  }
+
+  .splash__title {
+    font-size: var(--font-med);
+    margin-bottom: 1em;
+  }
+
+  .splash__subtitle {
+    font-size: var(--font-small);
+    margin-bottom: 1em;
+  }
+
+  .splash__logo {
+    max-height: 250px;
+    margin-bottom: 2em;
+  }
+
+  .splash__photo {
+    align-self: center;
+    max-height: 400px;
+    width: auto;
+  }
+
+  .button--cta {
+    font-size: var(--font-small);
+  }
+}
