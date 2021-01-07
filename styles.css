@@ -92,6 +92,27 @@ img {
   }
 }
 
+.shape-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.shape-divider svg {
+  position: relative;
+  display: block;
+  width: calc(135% + 1.3px);
+  height: 161px;
+}
+
+.shape-divider .shape-fill {
+  fill: #252525;
+}
+
 /* MENU BAR*/
 
 .menubar {
@@ -114,17 +135,18 @@ img {
   align-self: center;
   justify-self: center;
   max-width: 90vw;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   text-align: center;
   justify-content: center;
   align-content: flex-start;
+  grid-template-rows: 300px repeat(4, auto);
+  row-gap: 2em;
   grid-template-areas:
     'logo'
     'title'
     'subtitle'
     'photo'
     'cta';
-  row-gap: 2em;
 }
 
 .splash__logo {
@@ -178,16 +200,16 @@ img {
 @media (min-width: 600px) {
   .splash {
     max-width: 100vw;
+    column-gap: 3em;
+    align-content: center;
+    row-gap: 0;
+    margin: 0 auto;
+    padding: 0 1em;
     grid-template-areas:
       'logo     photo'
       'title    photo'
       'subtitle photo'
       'cta      photo';
-    column-gap: 3em;
-    align-content: center;
-    row-gap: 0;
-    margin-top: 0;
-    padding: 0 1em;
   }
 
   .splash__title {
