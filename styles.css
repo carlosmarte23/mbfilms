@@ -1,4 +1,13 @@
 /* RESETS AND VARIABLES */
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
 html,
 body,
 * {
@@ -73,12 +82,27 @@ body {
   }
 }
 
+/* MENU BAR*/
+
+.menubar {
+  height: 5vh;
+  width: 100%;
+  background-color: var(--color-bg-main);
+  /* background-color: red; */
+}
+
+@media screen and (min-width: 700px) {
+  .menubar {
+    height: 10vh;
+  }
+}
+
 /* SPLASH SECTION */
 
 .splash {
   display: grid;
-  height: 90vh;
-  margin-top: 10vh;
+  height: 95vh;
+  padding: 5vh 0;
   text-align: center;
   justify-content: center;
   align-content: flex-start;
@@ -151,7 +175,9 @@ body {
     column-gap: 2em;
     align-content: center;
     row-gap: 0;
+    margin-top: 0;
     padding: 0 1em;
+    height: 90vh;
   }
 
   .splash__title {
