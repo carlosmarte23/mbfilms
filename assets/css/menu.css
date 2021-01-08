@@ -85,7 +85,7 @@
   transition-duration: 500ms;
 }
 
-.menu-wrap .toggler:checked ~ .menu > div > div {
+.menu-wrap .toggler:checked ~ .menu > div > nav {
   opacity: 1;
   transition: opacity 250ms ease;
 }
@@ -116,7 +116,7 @@
   transition: all 250ms ease;
 }
 
-.menu-wrap .menu > div > div {
+.menu-wrap .menu > div > nav {
   text-align: center;
   max-width: 90vw;
   max-height: 100vh;
@@ -124,18 +124,18 @@
   transition: opacity 250ms ease;
 }
 
-.menu-wrap .menu > div > div > ul > li {
+.menu-wrap .menu > div > nav > ul > li {
   list-style: none;
   color: var(--color-light);
   font-size: var(--font-big);
   margin-bottom: 100px;
 }
 
-.menu-wrap .menu > div > div > ul > li:last-child {
+.menu-wrap .menu > div > nav > ul > li:last-child {
   margin-bottom: 0;
 }
 
-.menu-wrap .menu > div > div > ul > li > a {
+.menu-wrap .menu > div > nav > ul > li > a {
   color: inherit;
   font-size: inherit;
   text-decoration: none;
