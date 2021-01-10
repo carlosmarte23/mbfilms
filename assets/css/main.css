@@ -67,14 +67,9 @@ img {
   height: auto;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh;
-  align-items: center;
-  justify-items: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .button {
@@ -98,6 +93,26 @@ img {
   .button {
     font-size: var(--font-small);
     padding: 0.5em 1.5em;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  align-items: center;
+  justify-items: center;
+}
+
+.fa-5x {
+  font-size: 4em;
+}
+
+@media (min-width: 600px) {
+  .fa-5x {
+    font-size: 5em;
   }
 }
 

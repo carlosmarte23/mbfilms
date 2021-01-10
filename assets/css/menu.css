@@ -4,6 +4,11 @@
   top: 0;
   left: 0;
   z-index: 1;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .menu-wrap .toggler {
@@ -19,8 +24,8 @@
 
 .menu-wrap .hamburger {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
   z-index: 1;
   width: 60px;
   height: 60px;
@@ -29,6 +34,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .menu-wrap {
+    height: 100px;
+  }
+
+  .menu-wrap .hamburger {
+    top: 15px;
+    left: 20px;
+  }
 }
 
 /* Hamburguer Lines */
@@ -96,7 +112,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* visibility: hidden; */
+  visibility: hidden;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -119,7 +135,7 @@
 .menu-wrap .menu > div > nav {
   text-align: center;
   max-width: 90vw;
-  max-height: 100vh;
+  max-height: 90vh;
   opacity: 0;
   transition: opacity 250ms ease;
 }
@@ -127,8 +143,14 @@
 .menu-wrap .menu > div > nav > ul > li {
   list-style: none;
   color: var(--color-light);
-  font-size: var(--font-big);
+  font-size: var(--font-med);
   margin-bottom: 100px;
+}
+
+@media (min-width: 600px) {
+  .menu-wrap .menu > div > nav > ul > li {
+    font-size: var(--font-big);
+  }
 }
 
 .menu-wrap .menu > div > nav > ul > li:last-child {
@@ -140,4 +162,47 @@
   font-size: inherit;
   text-decoration: none;
   transition: color 250ms ease;
+}
+
+.menu__social {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu__social i {
+  padding: 0.2em;
+  margin: 0 0.2em;
+}
+
+@media (min-width: 600px) {
+  .menu__social {
+    display: none;
+  }
+}
+
+/* SOCIAL MENU ON DESKTOP */
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social a {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .social {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .social a {
+    margin-right: 50px;
+  }
 }

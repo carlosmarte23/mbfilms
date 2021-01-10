@@ -14,3 +14,6 @@ let navLinksArr = Array.from(navLinks);
 navLinksArr.forEach((link) => {
   link.addEventListener('click', hideMenu);
 });
+
+// get menu wrap and add event listener to close on click
+document.querySelector('.menu').addEventListener('click', hideMenu);
