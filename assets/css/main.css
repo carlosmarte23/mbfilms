@@ -315,7 +315,7 @@ a {
 
 .hola p {
   margin-bottom: 1em;
-  font-size: 3vh;
+  font-size: var(--font-small);
   text-align: justify;
   font-weight: 500;
 }
@@ -370,13 +370,28 @@ a {
 
 /* Ultra Wide Screens */
 @media (min-width: 1100px) {
+  .hola__main h1 {
+    font-size: var(--font-huge);
+  }
+
+  .hola__main p {
+    font-size: var(--font-med);
+  }
+
   .hola__secondary {
-    max-width: 600px;
+    max-width: 550px;
     transform: translateY(50px);
   }
 }
 
 @media (max-height: 650px) {
+  .hola__main h1 {
+    font-size: var(--font-big);
+  }
+
+  .hola__main p {
+    font-size: var(--font-small);
+  }
   .hola__secondary {
     max-width: 400px;
     transform: translateY(30px);

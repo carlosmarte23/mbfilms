@@ -143,10 +143,11 @@
   list-style: none;
   color: var(--color-light);
   font-size: var(--font-med);
-  margin-bottom: 100px;
+  margin-bottom: 2em;
 }
 
-@media (min-width: 600px) {
+/* Tablet size and up */
+@media (min-width: 600px) and (min-height: 900px) {
   .menu-wrap .menu > div > nav > ul > li {
     font-size: var(--font-big);
   }
