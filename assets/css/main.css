@@ -105,7 +105,8 @@ a {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   align-items: center;
   justify-items: center;
 }
@@ -286,6 +287,8 @@ a {
 /* --------------------------------------- */
 
 .container--hola {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('../images/Hola.jpg');
   background-position: center;
@@ -298,7 +301,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   max-width: 95vw;
-  height: 100vh;
+  max-width: calc(var(--vw, 1vw) * 95);
   padding: 0 1em;
 }
 
@@ -336,6 +339,7 @@ a {
 @media (min-width: 600px) {
   .hola {
     height: 60vh;
+    height: calc(var(--vh, 1vh) * 60);
   }
 
   .hola__main {

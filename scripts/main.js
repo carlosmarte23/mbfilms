@@ -1,3 +1,20 @@
+// vh and vw for real viewport sizes
+function calculateViewport() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  let vw = window.innerWidth * 0.01;
+  document.documentElement.style.setProperty('--vw', `${vw}px`);
+}
+
+//recalculate on window resize
+window.addEventListener('resize', () => {
+  calculateViewport();
+});
+
+calculateViewport(); //firstRun
+// --------------------------------------------------------
+
+// MENU functionality
 function hideMenu() {
   let toggler = document.querySelector('.toggler');
   let isMenuOpen = toggler.checked;
