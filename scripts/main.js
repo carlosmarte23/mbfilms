@@ -34,3 +34,18 @@ navLinksArr.forEach((link) => {
 
 // get menu wrap and add event listener to close on click
 document.querySelector('.menu').addEventListener('click', hideMenu);
+
+// FOTO CAROUSEL
+let fotoGal = document.querySelector('.foto-gallery');
+let flkty = new Flickity(fotoGal, {
+  //options
+  contain: true,
+  wrapAround: true,
+  autoPlay: true,
+  cellAlign: 'center',
+  draggable: '>1',
+});
+
+window.addEventListener('resize', () => {
+  flkty.resize();
+});
