@@ -37,7 +37,7 @@ document.querySelector('.menu').addEventListener('click', hideMenu);
 
 // FOTO CAROUSEL
 let fotoGal = document.querySelector('.foto-gallery');
-let flkty = new Flickity(fotoGal, {
+let flktyimg = new Flickity(fotoGal, {
   //options
   contain: true,
   wrapAround: true,
@@ -48,4 +48,14 @@ let flkty = new Flickity(fotoGal, {
 
 window.addEventListener('resize', () => {
   flkty.resize();
+});
+
+// VIDEO CAROUSEL
+let vidGal = document.querySelector('.video-gallery');
+let flktyvid = new Flickity(vidGal, {
+  //options
+  contain: true,
+  // autoPlay: true,
+  cellAlign: 'center',
+  draggable: '>1',
 });
