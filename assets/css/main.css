@@ -216,13 +216,13 @@ a {
 }
 
 /* Low Res Viewports */
-@media (max-width: 400px) and (min-height: 600px) {
+@media (max-width: 400px) and (min-height: 500px) {
   .splash__logo {
-    width: 150px;
+    max-width: 130px;
   }
 
   .splash__photo {
-    max-width: 150px;
+    max-width: 120px;
     margin-bottom: 0.5em;
   }
 }
@@ -347,7 +347,7 @@ a {
 }
 
 /* Low Res Viewports */
-@media (max-width: 400px) and (min-height: 600px) {
+@media (max-width: 400px) and (min-height: 500px) {
   .hola__main {
     margin-top: 0;
   }
@@ -357,7 +357,7 @@ a {
 
   .hola p {
     margin-bottom: 1em;
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
 
@@ -467,7 +467,7 @@ a {
 }
 
 /* low height screens */
-@media (max-width: 400px) and (min-height: 600px) {
+@media (max-width: 400px) and (min-height: 500px) {
   .fotografia h1 {
     margin-top: 1.5em;
   }
@@ -505,7 +505,6 @@ a {
   .fotografia h1 {
     margin-top: 2em;
     font-size: var(--font-big);
-    margin-bottom: 1em;
   }
 }
 
