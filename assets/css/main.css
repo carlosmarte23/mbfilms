@@ -25,7 +25,7 @@ body,
 
   --font-tiny: 1.6em;
   --font-small: 2.4em;
-  --font-med: 3.2em;
+  --font-med: 3em;
   --font-big: 4.8em;
   --font-huge: 6.4em;
 }
@@ -392,9 +392,11 @@ a {
   }
 
   .hola__secondary {
-    display: block;
+    display: flex;
     max-width: 400px;
     margin-right: 3em;
+    max-height: 85vh;
+    border: solid red 1px
   }
 }
 
@@ -538,7 +540,7 @@ a {
 }
 
 .video-gallery {
-  width: 100%;
+  width: 95%;
   height: 70vh;
   height: calc(var(--vh, 1vh) * 70);
   margin: 2em auto;
@@ -565,8 +567,5 @@ a {
     margin-top: 3em;
     font-size: var(--font-med);
     text-transform: uppercase;
-  }
-  .video-gallery {
-    width: 90%;
   }
 }
