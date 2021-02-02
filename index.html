@@ -199,26 +199,36 @@
 
     <div class="container container--contacto" id="contacto">
       <section class="contacto">
-        <h1 class="contacto__tilte">Contactanos</h1>
-        <p>
-          Ahora que sabes mas de mi, hablemos de negocios. Completa el siguiente
-          formulario con tus datos o escribeme a mis redes sociales y te
-          contactare lo antes posible.
-        </p>
-        <form action="https://formspree.io/f/mknpenwv" method="POST">
+        <div>
+          <h1 class="contacto__title">Contactanos</h1>
+          <p class="contacto-text">
+            Ahora que sabes mas de mi, hablemos de negocios.
+          </p>
+          <p class="contacto-text">
+            Completa el siguiente formulario con tus datos y te contactare lo antes posible.
+          </p>
+        </div>
+        <form
+          action="https://formspree.io/f/mknpenwv"
+          method="POST"
+          class="contacto__form"
+        >
           <label>
             Nombre:
             <input type="text" name="name" />
           </label>
+          <br />
           <label>
-            Your email:
+            E-mail:
             <input type="text" name="_replyto" />
           </label>
+          <br />
           <label>
-            Your message:
+            Tu mensaje:
             <textarea name="message"></textarea>
           </label>
-          <button type="submit">Enviar</button>
+          <br />
+          <button type="submit" class="button button--cta">Enviar</button>
         </form>
       </section>
     </div>
